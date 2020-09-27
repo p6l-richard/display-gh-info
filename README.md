@@ -1,5 +1,5 @@
 # display-gh-info
-An application that displays GitHub user information. Created this repository as the solution to a technical interview test in a recruiting process.
+An application (that only works locally so far) that displays GitHub user information. Created this repository as the solution to a technical interview test in a recruiting process.
 
 ## Time needed
 Given expected time for this task was 4-8 hours
