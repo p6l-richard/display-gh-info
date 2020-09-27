@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "ab0eaaa6-9557-4fd1-bcf0-643a280acd96",
+		"name": "GitHub API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Display user information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c3f2505a-22f5-4f84-b960-18f7cc3e3f96",
+						"exec": [
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response contains .login property\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property(\"login\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/github-user-profile/users/p6l-richard",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"github-user-profile",
+						"users",
+						"p6l-richard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display followers for specific user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f220054c-6843-4dfe-a263-35c35912d058",
+						"exec": [
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response contains .followers property\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property(\"followers\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/github-followers/users/p6l-richard",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"github-followers",
+						"users",
+						"p6l-richard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display mutual followers for specific user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df2b9e4f-9380-4eb2-b057-7e607a351f17",
+						"exec": [
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response contains .mutual_followers property\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property(\"mutual_followers\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/github-followers/users/p6l-richard/groups/mutual",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"github-followers",
+						"users",
+						"p6l-richard",
+						"groups",
+						"mutual"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1395b2db-0233-43c9-aea4-c55530ba3853",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1ee75add-8e49-4f0e-ad36-1425610d4f51",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "1f1b9017-150d-461e-83d7-1584b5ef616c",
+			"key": "localhost",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
