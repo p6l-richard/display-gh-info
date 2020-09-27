@@ -22,7 +22,7 @@ const Example = (props) => {
                             <Input placeholder="Github username" type="text" name="username" id="username"  onChange={handleChange} required/>
                         </InputGroup>
                     </FormGroup>
-                    <Button>Show User Info</Button>
+                    <Button color="info">Show User Info</Button>
                 </Form>
             </Col>
 
