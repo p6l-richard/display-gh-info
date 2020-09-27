@@ -1,3 +1,6 @@
+# Ignore GitHub authentication credentials
+backend/creds.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
