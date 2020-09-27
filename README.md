@@ -14,13 +14,13 @@ Note: The time above does not include breaks
 I have to admit that it took me some more time to read through the task & understand the problem, also it does not include writing this readme => so I probably finished more at the end of the 4-8hr window given.
 
 ## Getting started
-1. Clone (repo)[https://github.com/p6l-richard/display-gh-info]
+1. Clone [repo](https://github.com/p6l-richard/display-gh-info)
 2. Create backend/creds.py file storing the GitHub credentials 
 ```python 
 username = "your_username"
 password = "your_pw"
 ```
-3. Create Python virtual environment (see (docs for help)[https://docs.python.org/3/library/venv.html#creating-virtual-environments])
+3. Create Python virtual environment (see [docs for help](https://docs.python.org/3/library/venv.html#creating-virtual-environments))
 4. Activate virtual env `$ source venv/bin/activate` or `.\env\Scripts\Activate.ps1` on Windows
 5. Install dependencies
     - backend: 
